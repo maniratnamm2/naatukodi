@@ -7,237 +7,264 @@
     <title>Sri Giri Naatu Kodi Farm</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #fafafa;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-            color: white;
-            padding: 40px 20px;
+            background-color: #ffffff;
+            color: #2d3748;
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://natukodi.in/wp-content/uploads/2024/09/aseel-cock.webp') no-repeat center center;
-            background-size: cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        header h1, header p {
-            position: relative;
-            z-index: 1;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         h1 {
             margin: 0;
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: #1a202c;
         }
 
         header p {
-            font-size: 1.2em;
-            margin-top: 10px;
+            font-size: 1.125rem;
+            margin-top: 8px;
+            color: #718096;
+            font-weight: 400;
         }
 
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 40px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            margin: 0 auto;
+            padding: 80px 20px;
         }
 
         .info-section {
-            margin-bottom: 50px;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .info-section:hover {
-            transform: translateY(-5px);
+            margin-bottom: 80px;
+            padding: 0;
         }
 
         .info-section h2 {
-            color: #4CAF50;
-            border-bottom: 3px solid #4CAF50;
-            padding-bottom: 15px;
-            font-size: 2em;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 40px;
             text-align: center;
+            letter-spacing: -0.025em;
         }
 
         p {
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
         .products {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
         .product {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-            border: 1px solid #ddd;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 10px;
-            width: 300px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px;
             text-align: center;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
         }
 
         .product img {
-            border-radius: 10px;
-            margin-bottom: 15px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 24px;
         }
 
         .product h3 {
-            color: #4CAF50;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 16px;
         }
 
         .btn {
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            background-color: #1a202c;
             color: white;
             border: none;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
+            padding: 12px 24px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn:hover {
-            background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background-color: #2d3748;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .about-us {
-            background-color: #e8f5e8;
-            border-left: 5px solid #4CAF50;
-            padding: 20px;
-            margin-bottom: 30px;
+            background-color: #f7fafc;
+            border-left: 4px solid #4299e1;
+            padding: 32px;
+            margin-bottom: 40px;
+            border-radius: 8px;
         }
 
         .about-us h2 {
-            color: #2e7d32;
+            color: #1a202c;
+            margin-bottom: 24px;
         }
 
         .about-us p {
-            margin: 10px 0;
+            margin: 8px 0;
+            color: #4a5568;
         }
 
         .testimonials {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
         }
 
         .testimonial {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 10px;
-            width: 300px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px;
             text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial p {
             font-style: italic;
+            color: #4a5568;
+            margin-bottom: 16px;
+            font-size: 1rem;
         }
 
         .testimonial cite {
-            font-weight: bold;
-            color: #4CAF50;
+            font-weight: 600;
+            color: #1a202c;
         }
 
         .why-choose-us {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
         }
 
         .reason {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px;
             text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .reason:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
         }
 
         .reason h3 {
-            color: #4CAF50;
-            margin-bottom: 10px;
+            color: #1a202c;
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
 
         .team {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
         }
 
         .team-member {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 10px;
-            width: 250px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px;
             text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .team-member:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
         }
 
         .team-member h3 {
-            color: #4CAF50;
-            margin-bottom: 5px;
+            color: #1a202c;
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .team-member h4 {
+            color: #718096;
+            margin-bottom: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .team-member h5 {
+            color: #4299e1;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .team-member p {
-            margin: 5px 0;
-            font-size: 14px;
+            margin: 0;
+            color: #4a5568;
+            font-size: 0.875rem;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #333 0%, #555 100%);
-            color: white;
-            margin-top: 50px;
-            border-radius: 15px 15px 0 0;
+            padding: 48px 20px;
+            background-color: #1a202c;
+            color: #a0aec0;
+            margin-top: 80px;
+            border-top: 1px solid #2d3748;
+        }
+
+        footer a {
+            color: #4299e1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -245,7 +272,9 @@
 <body>
     <header>
         <h1>Sri Giri Naatu Kodi Farm</h1>
-        <p>Healthy and Farm-Raised</p>
+        <h3>Healthy and Farm-Raised</h3>
+        <p>Sri Giri Naatu Kodi Farm provides farm-raised, chemical-free naatu kodi (country chicken) products that are
+            healthy and delicious.</p>
     </header>
     <div class="container">
         <div class="info-section about-us">
@@ -296,22 +325,22 @@
                 </div>
             </div>
         </div>
-        <p>Sri Giri Naatu Kodi Farm provides farm-raised, chemical-free naatu kodi (country chicken) products that are
-            healthy and delicious.</p>
-        <img src="https://natukodi.in/wp-content/uploads/2024/09/aseel-cock.webp" alt="Aseel Cock"
-            style="width: 100%; max-width: 600px; display: block; margin: 20px auto;">
+
+        <!-- <img src="https://natukodi.in/wp-content/uploads/2024/09/aseel-cock.webp" alt="Aseel Cock"
+            style="width: 100%; max-width: 600px; display: block; margin: 20px auto;"> -->
         <div class="products">
+            <!-- <h2>Available Now</h2> -->
             <div class="product">
                 <img src="https://natukodi.in/wp-content/uploads/2024/09/Fighting-Roosters-scaled-1.webp"
-                    alt="Fighting Roosters" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    alt="Fighting Roosters">
                 <h3>Naatu Kodi with Skin</h3>
                 <p>Fresh and authentic naatu kodi with skin, naturally reared without chemicals. Perfect for traditional
                     dishes.</p>
                 <button class="btn">Order Now</button>
             </div>
             <div class="product">
-                <img src="https://static.freshtohome.com/cdn-cgi/image/width=600/https://static.freshtohome.com/media/catalog/product/c/o/country_chicken_3_2.jpeg" alt="Tender Chicken"
-                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <img src="https://static.freshtohome.com/cdn-cgi/image/width=600/https://static.freshtohome.com/media/catalog/product/c/o/country_chicken_3_2.jpeg"
+                    alt="Tender Chicken">
                 <h3>Naatu Kodi without Skin</h3>
                 <p>Cleaned naatu kodi without skin, farm-raised and healthy. Ready to cook for your functions and
                     festivals.</p>
@@ -319,7 +348,7 @@
             </div>
             <div class="product">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0PuI0gMeORqa-aH4aRPMvNFqUa80HSvlK_A&s"
-                    alt="Chicken Eggs" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    alt="Chicken Eggs">
                 <h3>Whole Naatu Kodi</h3>
                 <p>Complete farm-raised naatu kodi, chemical-free and nutritious. Ideal for special occasions.</p>
                 <button class="btn">Order Now</button>
@@ -344,7 +373,7 @@
         <h2>Contact Us</h2>
         <p>For orders and inquiries, reach out to us.</p>
         <p><strong>Mobile:</strong> 9848044627</p>
-        <button class="btn">Get in Touch</button>
+        <a href="/contact"><button class="btn">Get in Touch</button></a>
     </div>
     <footer>
         <p>&copy; 2026 Sri Giri Naatu Kodi Farm. All rights reserved.</p>

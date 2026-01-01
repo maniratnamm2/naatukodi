@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'contact.html'));
+});
+
 app.listen(port, () => {
     console.log(`Frontend server running at http://localhost:${port}`);
 });

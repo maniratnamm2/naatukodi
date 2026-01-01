@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sri Giri Naatu Kodi Farm</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fef7ed 0%, #fed7aa 50%, #fdba74 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(251, 146, 60, 0.15);
+            width: 100%;
+            max-width: 520px;
+            border: 1px solid #fed7aa;
+            position: relative;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, #fed7aa, #fdba74, #fb923c);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ea580c;
+            margin-bottom: 40px;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #9a3412;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            border: 2px solid #fed7aa;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #fefcf7;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ea580c;
+            box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
+            background-color: #ffffff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .radio-group {
+            margin-bottom: 24px;
+        }
+
+        .radio-group label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #9a3412;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .radio-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border: 2px solid #fed7aa;
+            border-radius: 10px;
+            background-color: #fefcf7;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover {
+            background-color: #fff7ed;
+            border-color: #fb923c;
+        }
+
+        .radio-option input[type="radio"] {
+            margin: 0;
+            width: auto;
+            accent-color: #ea580c;
+        }
+
+        .radio-option input[type="radio"]:checked+label {
+            color: #ea580c;
+            font-weight: 600;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 16px rgba(234, 88, 12, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(234, 88, 12, 0.4);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 2px solid #fed7aa;
+        }
+
+        .back-link a {
+            color: #ea580c;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: #dc2626;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <div class="radio-group">
+                <label>Available Now</label>
+                <div class="radio-options">
+                    <div class="radio-option">
+                        <input type="radio" id="with-skin" name="product" value="Naatu Kodi with Skin">
+                        <label for="with-skin">Naatu Kodi with Skin</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="without-skin" name="product" value="Naatu Kodi without Skin">
+                        <label for="without-skin">Naatu Kodi without Skin</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="whole-kodi" name="product" value="Whole Naatu Kodi">
+                        <label for="whole-kodi">Whole Naatu Kodi</label>
+                    </div>
+                </div>
+            </div>
+
+            <label for="quantity">Quantity (optional)</label>
+            <select id="quantity" name="quantity">
+                <option value="">Select quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="bulk">Bulk Order (specify below)</option>
+            </select>
+
+            <div id="bulkQuantityContainer" style="display: none;">
+                <label for="bulkQuantity">Bulk Quantity</label>
+                <input type="number" id="bulkQuantity" name="bulkQuantity" placeholder="Enter quantity (e.g., 50, 100)"
+                    min="11">
+            </div>
+
+            <label for="message">Your message (optional)</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="back-link">
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Handle bulk quantity field visibility
+        document.getElementById('quantity').addEventListener('change', function () {
+            const bulkContainer = document.getElementById('bulkQuantityContainer');
+            const bulkInput = document.getElementById('bulkQuantity');
+
+            if (this.value === 'bulk') {
+                bulkContainer.style.display = 'block';
+                bulkInput.required = true;
+            } else {
+                bulkContainer.style.display = 'none';
+                bulkInput.required = false;
+                bulkInput.value = '';
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch('http://localhost:3001/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    alert('Thank you for contacting us!');
+                    e.target.reset();
+                } else {
+                    alert('Error submitting form. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting form. Please try again.');
+            }
+        });
+    </script>
+</body>
+
+</html>
