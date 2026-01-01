@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Giri Naatu Kodi Farm</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://natukodi.in/wp-content/uploads/2024/09/aseel-cock.webp') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-section h2 {
+            color: #4CAF50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 15px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-us {
+            background-color: #e8f5e8;
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .about-us h2 {
+            color: #2e7d32;
+        }
+
+        .about-us p {
+            margin: 10px 0;
+        }
+
+        .testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        .testimonial cite {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .why-choose-us {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .reason {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .reason h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .team-member h3 {
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            color: white;
+            margin-top: 50px;
+            border-radius: 15px 15px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sri Giri Naatu Kodi Farm</h1>
+        <p>Healthy and Farm-Raised</p>
+    </header>
+    <div class="container">
+        <div class="info-section about-us">
+            <h2>About Us</h2>
+            <p>Location: Keesara</p>
+            <p>For functions, festivals naatu kodi available with discount</p>
+            <p>With skin and without skin naatu kodi available</p>
+        </div>
+        <div class="info-section">
+            <h2>Why Choose Us</h2>
+            <div class="why-choose-us">
+                <div class="reason">
+                    <h3>Specialized Expertise</h3>
+                    <p>We focus exclusively on supplying Natukodi (country chicken) birds, meat, and country eggs
+                        ensuring you receive the highest quality products available.</p>
+                </div>
+                <div class="reason">
+                    <h3>Commitment to Quality</h3>
+                    <p>We are passionate about delivering only the best Natukodi products, raised in a stress and
+                        chemical-free environment, and we stand by the quality of our products.</p>
+                </div>
+                <div class="reason">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We are dedicated to providing exceptional service and ensuring our customers are completely
+                        satisfied with our Natukodi products.</p>
+                </div>
+                <div class="reason">
+                    <h3>Franchise Opportunities</h3>
+                    <p>We offer franchise opportunities with full support and guidance, allowing you to become part of a
+                        trusted brand known for quality Natukodi products.</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-section">
+            <h2>Management Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <h3>Mr Venkata Ramana</h3>
+                    <h4>Degree in Business</h4>
+                    <h5>Operations manager</h5>
+                    <p>Ensures smooth operations and maintains high standards.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Mrs Alekya</h3>
+                    <h4>Degree in Agriculture</h4>
+                    <h5>Sales Manager</h5>
+                    <p>Handles customer relations and sales for our products.</p>
+                </div>
+            </div>
+        </div>
+        <p>Sri Giri Naatu Kodi Farm provides farm-raised, chemical-free naatu kodi (country chicken) products that are
+            healthy and delicious.</p>
+        <img src="https://natukodi.in/wp-content/uploads/2024/09/aseel-cock.webp" alt="Aseel Cock"
+            style="width: 100%; max-width: 600px; display: block; margin: 20px auto;">
+        <div class="products">
+            <div class="product">
+                <img src="https://natukodi.in/wp-content/uploads/2024/09/Fighting-Roosters-scaled-1.webp"
+                    alt="Fighting Roosters" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <h3>Naatu Kodi with Skin</h3>
+                <p>Fresh and authentic naatu kodi with skin, naturally reared without chemicals. Perfect for traditional
+                    dishes.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="product">
+                <img src="https://static.freshtohome.com/cdn-cgi/image/width=600/https://static.freshtohome.com/media/catalog/product/c/o/country_chicken_3_2.jpeg" alt="Tender Chicken"
+                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <h3>Naatu Kodi without Skin</h3>
+                <p>Cleaned naatu kodi without skin, farm-raised and healthy. Ready to cook for your functions and
+                    festivals.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0PuI0gMeORqa-aH4aRPMvNFqUa80HSvlK_A&s"
+                    alt="Chicken Eggs" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <h3>Whole Naatu Kodi</h3>
+                <p>Complete farm-raised naatu kodi, chemical-free and nutritious. Ideal for special occasions.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="info-section">
+        <h2>What Customers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Sri Giri Naatu Kodi Farm provides the best farm-raised naatu kodi. Healthy, well-fed, and
+                    naturally grown."</p>
+                <cite>- Customer 1</cite>
+            </div>
+            <div class="testimonial">
+                <p>"Excellent quality naatu kodi, perfect for festivals and functions. Highly recommend!"</p>
+                <cite>- Customer 2</cite>
+            </div>
+        </div>
+    </div>
+    <div class="info-section">
+        <h2>Contact Us</h2>
+        <p>For orders and inquiries, reach out to us.</p>
+        <p><strong>Mobile:</strong> 9848044627</p>
+        <button class="btn">Get in Touch</button>
+    </div>
+    <footer>
+        <p>&copy; 2026 Sri Giri Naatu Kodi Farm. All rights reserved.</p>
+        <p>Follow us on <a href="#" style="color: #4CAF50;">Facebook</a> | <a href="#"
+                style="color: #4CAF50;">Instagram</a></p>
+    </footer>
+</body>
+
+</html>
